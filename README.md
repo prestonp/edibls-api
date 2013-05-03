@@ -13,7 +13,7 @@ Install
     * forever - `$ npm install -g forever`
     * mocha - `$ npm install -g mocha`
 * Use `npm install` to download dependencies
-* Add NGINX virtual server block to `/usr/local/nginx/sbin/nginx`
+* Add NGINX virtual server block to `/usr/local/nginx/conf/nginx.conf`
 
 
 Run
