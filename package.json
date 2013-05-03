@@ -1,0 +1,31 @@
+{
+  "name": "edibls-api",
+  "version": "0.0.0",
+  "description": "Powers the edibls api over http",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "~3.1.0",
+    "gravatar": "~1.0.6",
+    "jade": "~0.30.0",
+    "mongoose": "~3.6.9",
+    "request": "~2.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prestonp/edibls-api.git"
+  },
+  "keywords": [
+    "edibls"
+  ],
+  "author": "Preston Pham",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "0132fba158d0f0bf1e6f5452fe566eba61fd7b83"
+}
