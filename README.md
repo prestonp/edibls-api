@@ -7,11 +7,11 @@ WIP
 
 Install
 -------
-
-* Install mongo
 * Install Node.js
-* `npm install -g forever`
-* `npm install -g mocha`
+* Install mongo
+* Install other tools
+    * forever - `$ npm install -g forever`
+    * mocha - `$ npm install -g mocha`
 * Use `npm install` to download dependencies
 * Add NGINX virtual server block to `/usr/local/nginx/sbin/nginx`
 
@@ -22,19 +22,25 @@ Run
     $ mongod &
     $ forever start app.js
 
+Check yo self before you wreck yo self
+--------------------------------------
+    // Check the production server
+    $ curl api.edibls.com/restaurants
+ 
+    // or locally..
+    $ curl localhost:3001/restaurants
+    
 Test
 ----
 
-Use
-    npm test
-or
-    make test
-or
-    mocha --reporter spec
+Use whatever test command you'd like. They are aliases of mocha.
 
-They all walk through test/
+    $ npm test
+    $ make test
+    $ mocha --reporter spec
 
-Author
-------
-Preston Pham
-Jeejo Pallayi
+Authors
+-------
+
+* [Preston Pham](http://prestonpham.com)
+* [Jeejo Pallayi](http://pallayi.com)
