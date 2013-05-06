@@ -3,7 +3,7 @@ edibls-api
 
 Overhauling backend services to separate project.
 
-WIP
+Documentation on API endpoints can be found [here](http://docs.edibls.apiary.io/).
 
 Install
 -------
