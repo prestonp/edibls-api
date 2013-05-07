@@ -3,7 +3,7 @@ var assert = require('assert')
   , http = require('http');
 
 describe('Restaurant API', function() {
-  describe('/restaurants', function() {
+  describe('GET /restaurants', function() {
 
     before(function() {
     });
@@ -14,14 +14,34 @@ describe('Restaurant API', function() {
         done();
       });
     });
+  });
 
-    it('should handle content negotiation', function(done) {
-      assert.ok(false);
-      done();
-    });
-  
+  describe('GET /restaurants/:id', function() {
     it('should return restaurant by :id', function(done) {
       request.get('http://localhost:3001/restaurants/43141431', function(err, res, body) {
+        assert(false);
+        done();
+      });
+    });
+
+    it('should return error for invalid :id', function(done) {
+      request.get('http://localhost:3001/restaurants/43141431', function(err, res, body) {
+        assert(false);
+        done();
+      });
+    });
+  });
+
+  describe('POST /restaurants/', function() {
+    it('should create restaurant and return it', function(done) {
+      request.post('http://localhost:3001/restaurants/43141431', function(err, res, body) {
+        assert(false);
+        done();
+      });
+    });
+
+    it('should fail creating restaurant', function(done) {
+      request.post('http://localhost:3001/restaurants/43141431', function(err, res, body) {
         assert(false);
         done();
       });
