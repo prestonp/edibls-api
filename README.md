@@ -24,6 +24,7 @@ Run
 
 Check yo self before you wreck yo self
 --------------------------------------
+
     // Check the production server
     $ curl api.edibls.com/restaurants
  
@@ -33,7 +34,7 @@ Check yo self before you wreck yo self
 Test
 ----
 
-Use whatever test command you'd like. They are aliases of mocha.
+Use whatever test command you'd like. Do *not* test in production!!!
 
     $ npm test
     $ make test
