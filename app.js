@@ -10,7 +10,6 @@ var express = require('express')
   , env = require('./cfg/env')
   , mongoose = require('mongoose');
 
-mongoose.connect(env.mongo_url);
 
 var app = express();
 
@@ -23,10 +22,18 @@ app.configure(function(){
   app.use(app.router);
 });
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
+app.configure('production', function(){
+  app.set('mongo url', env.mongo_url.prod);
+  console.log('Running in Production Modeß');
 });
 
+app.configure('development', function(){
+  app.use(express.errorHandler());
+  app.set('mongo url', env.mongo_url.dev);
+  console.log('Running in Development Mode');
+});
+
+mongoose.connect(app.get('mongo url'));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

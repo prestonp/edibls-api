@@ -5,7 +5,21 @@ var assert = require('assert')
 describe('Restaurant API', function() {
   describe('GET /restaurants', function() {
 
-    before(function() {
+    before(function(done) {
+      request({
+        method: 'POST'
+      , url: 'http://localhost:3001/restaurants'
+      , body: JSON.stringify(
+        { name: 'Test name'
+        , street: '15418 Meadow Village Dr.'
+        , city: 'Houston'
+        , state: 'Texas'
+        })
+      }, function(err, res, body) {
+        console.log('before stuff');
+        console.dir(body);
+        done();
+      });
     });
 
     it('should return list of restaurants', function(done) {
