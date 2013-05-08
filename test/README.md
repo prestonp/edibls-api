@@ -1,5 +1,10 @@
+Note
+----
 These are strictly backend tests running against an actual database. Ensure that the api 
-application is running in `NODE_ENV` == 'development' in to prevent writing against
-the production database.
+is running with
 
-Simple examples would be CRUD operations. Just make sure the database works.
+    NODE_ENV == 'development'
+    
+So it will write to the dev database, and *not* the production database.
+
+Simple examples would be CRUD operations, making sure the database works.
