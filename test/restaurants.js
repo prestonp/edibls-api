@@ -106,4 +106,17 @@ describe('Restaurant API', function() {
         });
     });
   });
+
+  describe('POST /restaurants/search', function() {
+    it('should return list by search query', function(done) {
+      request.post('http://localhost:3001/restaurants/search'
+      , { body: JSON.stringify({ query: 'Test' }) }
+      , function(err, res, body) {
+        assert(body);
+        assert(res.statusCode == 200);
+        assert(body.length > 0);
+        done();
+      });
+    });
+  });
 });
